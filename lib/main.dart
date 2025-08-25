@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:googlemaps/google_map.dart';
 import 'package:googlemaps/home_screen.dart';
 
 void main(){
+
   runApp(const MyApp());
 }
 class MyApp extends StatelessWidget {
@@ -15,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomeScreen(),
+      home: Google_map(),
     );
   }
 }
