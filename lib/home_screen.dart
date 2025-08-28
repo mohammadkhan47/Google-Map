@@ -79,7 +79,7 @@ class _HomeScreenState extends State<HomeScreen> {
         onPressed: () async{
           GoogleMapController controller = await _controller.future;
           controller.animateCamera(CameraUpdate.newCameraPosition(CameraPosition(target: LatLng(33.983693, 71.509606 ),
-              zoom: 14)),
+              zoom: 13)),
           );
           setState(() {
 
