@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:googlemaps/sign%20in.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({super.key});
@@ -49,20 +50,55 @@ class _SignUpState extends State<SignUp> {
           Text('Lorem ipsum dolor sit amet\nconsectetur adipiscing elit',
             style: TextStyle(fontSize: 20),
           ),
-          SizedBox(height: 20),
-          SizedBox(
-            height: 200,
-            width: 350,
+          SizedBox(height: 30),
+          Padding(
+            padding: EdgeInsets.only(left: 20,right: 20),
             child: TextField(
               decoration: InputDecoration(
+                filled: true,
                 hintText: ' enter email',
                 labelText: 'Email',
                 prefixIcon: Icon(Icons.email_outlined),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(15),
-
-                )
+                ),
               ),
+            ),
+          ),
+          SizedBox(height: 10),
+          Padding(
+            padding: EdgeInsets.only(left: 20,right: 20),
+            child: TextField(
+              decoration: InputDecoration(
+                filled: true,
+                  hintText: ' enter password',
+                  labelText: 'password',
+                  suffixIcon: Icon(Icons.visibility),
+                  prefixIcon: Icon(Icons.email_outlined),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
+                  )
+              ),
+            ),
+          ),
+          SizedBox(height: 40),
+          GestureDetector(
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>Signup()));
+            },
+            child: Container(
+              width: 300,
+              height: 60,
+              decoration: BoxDecoration(
+                color: Colors.red,
+                borderRadius: BorderRadius.circular(15),
+              ),
+              child: Center(
+                child: Text('LOG IN',style: TextStyle(
+                  color: Colors.white
+                ),),
+              ),
+            
             ),
           )
         ],
