@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:googlemaps/google_map.dart';
 import 'package:googlemaps/home_screen.dart';
+import 'package:googlemaps/lottery.dart';
 import 'package:googlemaps/signup.dart';
 
 void main(){
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: SignUp(),
+      home: LotteryApp(),
     );
   }
 }
