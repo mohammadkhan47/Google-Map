@@ -28,6 +28,7 @@ class _LotteryAppState extends State<LotteryApp> {
           Center(
             child: Text('Lottery winning number is $x'),
           ),
+          Divider(thickness: 2,indent: 20,endIndent: 20,color: Colors.black,),
           // Text(x>5? 'x is greater then 5': x.toString())
           SizedBox(height: 15),
           Container(

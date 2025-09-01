@@ -3,6 +3,7 @@ import 'package:googlemaps/google_map.dart';
 import 'package:googlemaps/home_screen.dart';
 import 'package:googlemaps/lottery.dart';
 import 'package:googlemaps/signup.dart';
+import 'package:googlemaps/top_widgets.dart';
 
 void main(){
 
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: LotteryApp(),
+      home: TopWidgets(),
     );
   }
 }
