@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:googlemaps/lottery.dart';
 
 class TopWidgets extends StatefulWidget {
   const TopWidgets({super.key});
@@ -16,23 +17,62 @@ class _TopWidgetsState extends State<TopWidgets> {
         centerTitle: true,
         backgroundColor: Colors.blueAccent,
       ),
+      drawer: SafeArea(
+        child: Drawer(
+          child: ListView(
+            children: [
+              // DrawerHeader(child: Text('Mohammad khan')),
+              UserAccountsDrawerHeader(
+                decoration: BoxDecoration(
+                  color: Colors.amber),
+                  currentAccountPicture: CircleAvatar(
+                    backgroundImage: NetworkImage('https://images.pexels.com/photos/1128678/pexels-photo-1128678.jpeg'),
+                  ),
+                  accountName: Text('mohammad khan'), 
+                  accountEmail: Text('mohamad@gmail.com')),
+              ListTile(
+                leading: Icon(Icons.home_filled),
+                title: Text('page 1'),
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>LotteryApp()));
+                },
+
+              ),
+              ListTile(
+                leading: Icon(Icons.home_filled),
+                title: Text('page 2'),
+                onTap: (){},
+
+              )
+            ],
+          ),
+        ),
+      ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          TextButton(onPressed: (){},
+              child: Text('Screen'))
 
-          Expanded(child: ListView.builder(
-              itemCount: 100,
-              itemBuilder: (context, index){
-                return ListTile(
-                  title: Text('mohammad khan'),
-                  subtitle: Text('learning flutter'),
-                  trailing: Text('12:44 PM'),
-                  leading: CircleAvatar(
-                    backgroundImage: NetworkImage('https://images.pexels.com/photos/1128678/pexels-photo-1128678.jpeg'),
-                  ),
-                );
-              }))
+          
+          
+          
+          
+          
+
+          // Expanded(child: ListView.builder(
+          //     itemCount: 100,
+          //     itemBuilder: (context, index){
+          //       return ListTile(
+          //         title: Text('mohammad khan'),
+          //         subtitle: Text('learning flutter'),
+          //         trailing: Text('12:44 PM'),
+          //         leading: CircleAvatar(
+          //           backgroundImage: NetworkImage('https://images.pexels.com/photos/1128678/pexels-photo-1128678.jpeg'),
+          //         ),
+          //       );
+          //     }))
 
 
 
